@@ -1,0 +1,44 @@
+<div id="modal" class="hidden">
+  <div class="modal-box">
+    <!-- 日期 + 今日摄入-消耗 -->
+    <div style="display:flex; justify-content: space-between; align-items:center;">
+      <h3 id="modalDate"></h3>
+      <p>今日摄入-消耗：<span id="diff">0</span></p>
+    </div>
+
+    <!-- 体重 -->
+    <div class="section">
+      <label>空腹体重</label>
+      <input id="morningWeight" type="number" step="0.1">
+    </div>
+
+    <div class="section">
+      <label>睡前体重</label>
+      <input id="nightWeight" type="number" step="0.1">
+    </div>
+
+    <!-- 吃了什么 -->
+    <div class="section">
+      <label>吃了什么（总卡：<span id="foodTotal">0</span>）</label>
+      <div id="foodList"></div>
+      <button type="button" id="addFood">+ 添加一餐</button>
+    </div>
+
+    <!-- 做了什么运动 -->
+    <div class="section">
+      <label>做了什么运动（总消耗：<span id="exerciseTotal">0</span>）</label>
+      <div id="exerciseList"></div>
+      <button type="button" id="addExercise">+ 添加一项运动</button>
+      <!-- 来月经 -->
+      <div style="margin-top:8px;">
+        <label style="display:flex; align-items:center;">
+          <input type="checkbox" id="period" style="margin-right:6px;">
+          来月经
+        </label>
+      </div>
+    </div>
+
+    <button type="button" id="saveBtn">保存</button>
+    <button type="button" id="closeBtn">关闭</button>
+  </div>
+</div>

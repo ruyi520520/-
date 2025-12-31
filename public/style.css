@@ -1,0 +1,45 @@
+/* 日历样式 */
+#calendar-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#calendar-controls button { padding: 4px 10px; margin: 0 10px; cursor: pointer; }
+#calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; }
+.day {
+  border: 1px solid #ccc;
+  min-height: 80px;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f9f9f9;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+.day:hover { background: #e0f7fa; }
+.day.today { border: 2px solid #00796b; }
+.day.hasRecord { background: #c8e6c9; }
+
+/* modal 样式 */
+.hidden { display: none; }
+.modal-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+.section { margin-bottom: 15px; }
+.section label { display: block; font-weight: bold; margin-bottom: 5px; }
+.section input { margin-bottom: 5px; width: 80%; }
+.modal-box button { margin-top: 5px; }
